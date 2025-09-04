@@ -51,4 +51,4 @@ cart.remove("Mango")
 
 print(cart.show_cart())
 
-price = {"shirt": 5000, "shoes": 120000}
+#price = {"shirt": 5000, "shoes": 120000}
