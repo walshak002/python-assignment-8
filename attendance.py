@@ -14,3 +14,28 @@ Example Usage:
     print(register.get_status("John"))   # "Present"
     print(register.show_register())      # {"John": "Present", "Mary": "Absent"}
 """
+
+class AttendanceRegister:
+    def __init__(self):
+        # Store attendance in a dictionary where student name is the key
+        self.records = {}
+
+    def mark_present(self, student_name):
+        self.records[student_name] = "Present"
+
+    def mark_absent(self, student_name):
+        self.records[student_name] = "Absent"
+
+    def get_status(self, student_name):
+        return self.records.get(student_name, "No record found")
+
+    def show_register(self):
+        """Return the full attendance register"""
+        return self.records
+    
+register = AttendanceRegister()
+register.mark_present("John")
+register.mark_absent("Mary")
+
+print(register.get_status("John"))     
+print(register.show_register())      
