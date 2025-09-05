@@ -18,3 +18,20 @@ Example Usage:
     print(election.results())  # {"Alice": 2, "Bob": 1}
     print(election.winner()) # Alice
 """
+
+class VotingSystem:
+    def __init__(self):
+        self.candidate = {}
+        self.voters = {}
+    def register_candidate(self, name):
+        if name in self.candidate:
+            print(f"Candidate {name} already registered")
+        else:
+            self.candidate[name] = 0
+            print(f"Candidate {name} register successfully")
+    
+
+
+election = VotingSystem()
+election.register_candidate("Alice")
+election.register_candidate("Bob")
